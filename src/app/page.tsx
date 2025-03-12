@@ -17,7 +17,7 @@ export default async function Home() {
           />
           <div className="absolute inset-0 flex flex-col items-center justify-end space-y-2 rounded-lg bg-gradient-to-t from-black via-transparent to-transparent p-4 text-white">
             <h1 className="text-center text-3xl font-bold xl:text-4xl">
-              Find the best restaurants near you uu
+              Find the best restaurants near you
             </h1>
             <p className="text-center text-lg">
               Search for your favorite cuisine, restaurant, or dish
