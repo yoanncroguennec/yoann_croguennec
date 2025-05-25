@@ -9,10 +9,8 @@ interface DataLink {
 const iconEmail = "/assets/icons/iconEmail.png";
 const iconLinkedin = "/assets/icons/iconLinkedin.png";
 const iconPhone = "/assets/icons/iconPhone.png";
-const iconWebsite = "/assets/icons/iconWebsite.png";
 const iconYoutube = "/assets/icons/iconYoutube.png";
 
-// tableau typé
 const dataLinks: DataLink[] = [
   {
     name: "Email",
@@ -24,11 +22,6 @@ const dataLinks: DataLink[] = [
     icon: iconLinkedin,
     url: "https://www.linkedin.com/in/yoann-croguennec/",
   },
-  // {
-  //   name: "Portfolio",
-  //   icon: iconWebsite,
-  //   url: "",
-  // },
   {
     name: "Youtube",
     icon: iconYoutube,
@@ -39,11 +32,6 @@ const dataLinks: DataLink[] = [
     icon: iconPhone,
     url: "tel:0765827083",
   },
-  // {
-  //   name: "SMS",
-  //   icon: icon_A_DEFINIR,
-  //   url: "sms:0765827083",
-  // },
 ];
 
 export default dataLinks
