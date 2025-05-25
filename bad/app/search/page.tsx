@@ -1,7 +1,7 @@
-import Header from "@/components/Header";
-import RestaurantItem from "@/components/RestaurantItem";
-import { Skeleton } from "@/components/ui/skeleton";
-import { locations, searchRestaurants } from "@/data/restaurants";
+import Header from "../../components/Header";
+import RestaurantItem from "../../components/RestaurantItem";
+import { Skeleton } from "../../components/ui/skeleton";
+import { locations, searchRestaurants } from "../../data/restaurants";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
 

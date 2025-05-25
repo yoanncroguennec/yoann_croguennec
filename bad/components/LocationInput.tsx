@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import {
   Command,
   CommandEmpty,
@@ -6,14 +6,14 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/command";
+} from "./ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
-import { locations } from "@/data/restaurants";
-import { cn } from "@/lib/utils";
+} from "./ui/popover";
+import { locations } from "../data/restaurants";
+import { cn } from "../lib/utils";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { useState } from "react";
 

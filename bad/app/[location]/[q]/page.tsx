@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
-import RestaurantItem from "@/components/RestaurantItem";
-import { getAllTags, locations, searchRestaurants } from "@/data/restaurants";
+import Header from "../../../components/Header";
+import RestaurantItem from "../../../components/RestaurantItem";
+import { getAllTags, locations, searchRestaurants } from "../../../data/restaurants";
 import { Metadata } from "next";
 import { cache } from "react";
 

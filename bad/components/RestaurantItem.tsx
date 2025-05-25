@@ -1,12 +1,12 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "./ui/badge";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Restaurant } from "@/data/restaurants";
+} from "./ui/card";
+import { Restaurant } from "../data/restaurants";
 import { Clock, MapPin, Phone, Star, StarHalf } from "lucide-react";
 import Image from "next/image";
 

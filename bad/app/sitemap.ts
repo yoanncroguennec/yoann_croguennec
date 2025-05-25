@@ -1,4 +1,4 @@
-import { getAllTags, locations } from "../../bad/data/restaurants";
+import { getAllTags, locations } from "../data/restaurants";
 import { MetadataRoute } from "next";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
