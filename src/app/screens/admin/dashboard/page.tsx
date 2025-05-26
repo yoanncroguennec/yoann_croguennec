@@ -1,6 +1,5 @@
-import QR_Code_Generate from "@/app/widgets/qrCodeGenerate/QR_Code_Generate";
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import QR_Code_Generate from "@/app/components/widgets/qrCodeGenerate/QR_Code_Generate";
 
 // IMGS
 const bgAdmin_1 = "/assets/imgs/bgAdmin_1.jpg";
