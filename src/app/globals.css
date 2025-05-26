@@ -119,12 +119,6 @@ body {
   border-width: 2px;
 }
 
-.socials-container a svg {
-  height: 32px;
-  /* fill: var(--accent-color, #000); */
-  transition: fill 0.3s ease;
-}
-
 .socials-container a::before {
   content: attr(data-social);
   position: absolute;

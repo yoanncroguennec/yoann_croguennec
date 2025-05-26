@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import QR_Code_Generate from "@/app/components/widgets/qrCodeGenerate/QR_Code_Generate";
+import Navbar from "@/app/components/layouts/admin/navbar/Navbar";
 
 // IMGS
 const bgAdmin_1 = "/assets/imgs/bgAdmin_1.jpg";
@@ -17,6 +18,7 @@ export default function DashBoard_Screen() {
         width: "100vw",
       }}
     >
+      <Navbar />
       <Typography
         sx={{
           color: "#F0F",

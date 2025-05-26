@@ -16,6 +16,7 @@ const dataSocialsLinks: DataSocialsLinks[] = [
         height="45"
         viewBox="0 0 25 25"
         fill="#34A853"
+        style={{ height: "32px", transition: "fill 0.3s ease" }}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.6a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.25 1.01l-2.3 2.22z" />
@@ -31,6 +32,7 @@ const dataSocialsLinks: DataSocialsLinks[] = [
         height="24"
         viewBox="0 0 24 24"
         fill="none"
+        style={{ height: "32px", transition: "fill 0.3s ease" }}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -58,6 +60,7 @@ const dataSocialsLinks: DataSocialsLinks[] = [
         viewBox="0 0 48 34"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        style={{ height: "32px", transition: "fill 0.3s ease" }}
         width="32"
         height="32"
       >
@@ -77,6 +80,7 @@ const dataSocialsLinks: DataSocialsLinks[] = [
         width="24"
         height="24"
         viewBox="0 0 24 24"
+        style={{ height: "32px", transition: "fill 0.3s ease" }}
         fill="#0A66C2"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -88,7 +92,13 @@ const dataSocialsLinks: DataSocialsLinks[] = [
     name: "Mon GitHub",
     url: "https://github.com/yoanncroguennec/",
     svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        style={{ height: "32px", transition: "fill 0.3s ease" }}
+        width="32"
+        height="32"
+      >
         <path d="M12 0C5.37 0 0 5.373 0 12a12 12 0 008.21 11.387c.6.113.82-.26.82-.577v-2.234c-3.34.724-4.04-1.61-4.04-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.302 3.5.996.11-.774.42-1.303.76-1.603-2.665-.3-5.466-1.33-5.466-5.932 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.322 3.3 1.23a11.46 11.46 0 016 0c2.29-1.552 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.47 5.93.43.37.81 1.1.81 2.22v3.293c0 .32.22.694.82.577A12.003 12.003 0 0024 12c0-6.627-5.373-12-12-12z" />
       </svg>
     ),

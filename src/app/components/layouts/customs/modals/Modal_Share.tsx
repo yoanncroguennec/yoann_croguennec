@@ -1,46 +1,36 @@
-import { Box, Typography } from "@mui/material";
-import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton } from "react-share";
+import { Typography } from "@mui/material";
+// STYLES
+import { RootModal_Share } from "./StylesModal_Share";
+// DATAS
+import dataSocialsLinksShare from "@/app/utils/constants/data/dataSocialsLinksShare";
 
 interface Types_Modal_Share {
-  openModalShare: boolean ;
-  shareUrl: string;
+  openModalShare: boolean;
 }
 
-export default function Modal_Share({ openModalShare, shareUrl } : Types_Modal_Share) {
+export default function Modal_Share({ openModalShare }: Types_Modal_Share) {
+
   return (
     openModalShare && (
-      <Box
-        sx={{
-          position: "absolute",
-          zIndex: 999,
-          background: "rgba(255, 255, 255, 0.06)",
-          backdropFilter: "blur(5px)",
-          border: "2px solid #FFF",
-          borderRadius: "15px",
-          padding: "10px 20px",
-        }}
-      >
-        <Typography variant="h5" sx={{ color: "red", mb: 1 }}>
-          Partager sur
+      <RootModal_Share>
+        <Typography variant="h5" sx={{ color: "#F0F", textAlign: "center" }}>
+          Partager la fiche sur
         </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: 2,
-          }}
-        >
-          <FacebookShareButton url={shareUrl}>
-            <FacebookIcon round size={35} />
-          </FacebookShareButton>
-          <LinkedinShareButton url={shareUrl}>
-            <LinkedinIcon round size={35} />
-          </LinkedinShareButton>
-          <EmailShareButton url={shareUrl}>
-            <EmailIcon round size={35} />
-          </EmailShareButton>
-        </Box>
-      </Box>
+        <div className="socials-container">
+          {dataSocialsLinksShare.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              rel="noopener noreferrer"
+              target="_blank"
+              data-social={social.name}
+              aria-label={social.name}
+            >
+              {social.svg}
+            </a>
+          ))}
+        </div>
+      </RootModal_Share>
     )
   );
 }

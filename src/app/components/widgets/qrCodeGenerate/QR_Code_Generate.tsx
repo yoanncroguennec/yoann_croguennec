@@ -16,6 +16,7 @@ import {
 export default function QR_Code_Generate() {
   const [value, setValue] = useState<string>("");
   const [qrVisible, setQrVisible] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   function isValidURL(str: string): boolean {
@@ -27,25 +28,41 @@ export default function QR_Code_Generate() {
     }
   }
 
+  function formatUrl(url: string): string {
+    if (!/^https?:\/\//i.test(url)) {
+      return "https://" + url;
+    }
+    return url;
+  }
+
   function GenerateQrCode_Handler() {
-    if (!value || !isValidURL(value)) {
+    const formattedUrl = formatUrl(value);
+
+    if (!value || !isValidURL(formattedUrl)) {
       inputRef.current?.focus();
-      alert("Veuillez entrer une URL valide.");
+      setError("Veuillez entrer une URL valide.");
+      setQrVisible(false);
       return;
     }
+
+    setError(null);
+    setValue(formattedUrl);
     setQrVisible(true);
   }
 
   useEffect(() => {
     if (!value) {
       setQrVisible(false);
+      setError(null);
     }
   }, [value]);
 
   return (
     <RootQR_Code_Generate qrVisible={qrVisible}>
       <TypoTitle variant="h5">Générer un Code QR</TypoTitle>
+
       <TextField
+        inputRef={inputRef}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -53,8 +70,11 @@ export default function QR_Code_Generate() {
             </InputAdornment>
           ),
           sx: {
-            fontSize: "18px", // taille du texte saisi
+            fontSize: "18px",
           },
+        }}
+        inputProps={{
+          "aria-label": "Champ pour entrer l'URL à convertir en QR code",
         }}
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={(e) => {
@@ -68,17 +88,17 @@ export default function QR_Code_Generate() {
           width: "100%",
           input: {
             color: "#000",
-            fontSize: "18px", // ✅ taille du texte saisi
+            fontSize: "18px",
             "::placeholder": {
               color: "#000",
               opacity: 1,
-              fontSize: "18px", // ✅ taille du placeholder
+              fontSize: "18px",
               fontWeight: "bold",
             },
           },
           label: {
             color: "#000",
-            fontSize: "18px", // ✅ taille du label
+            fontSize: "18px",
           },
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
@@ -97,12 +117,18 @@ export default function QR_Code_Generate() {
         variant="outlined"
       />
 
+      {error && (
+        <p style={{ color: "red", marginTop: 8, fontSize: "14px" }}>{error}</p>
+      )}
+
       <BtnGenerateCodeQR onClick={GenerateQrCode_Handler} variant="text">
         <TypoGenerateCodeQR variant="h6">Générer Code QR</TypoGenerateCodeQR>
       </BtnGenerateCodeQR>
 
       {qrVisible && (
-        <QRCode size={150} style={{ marginTop: "20px" }} value={value} />
+        <div style={{ marginTop: "20px", width: "100%", maxWidth: 200 }}>
+          <QRCode value={value} style={{ width: "100%" }} />
+        </div>
       )}
     </RootQR_Code_Generate>
   );

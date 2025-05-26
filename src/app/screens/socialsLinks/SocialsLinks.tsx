@@ -32,8 +32,6 @@ const imgProfile = "/assets/imgs/img_profile_1.jpeg";
 export default function SocialsLinks_Screen() {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [openModalShare, setOpenModalShare] = useState<boolean>(false);
-  const [shareUrl] = useState<string>("");
-
   //
   const textMyPresentation =
     "Yoann Croguennec, 37 ans, ayant obtenu un BTS de développeur web et web mobile, puis un niveau Licence. Spécialisé dans la création de site internet (React JS, Next JS), mais également dans la création d'application pour téléphone portable IOS & Android (React native).";
@@ -78,7 +76,7 @@ export default function SocialsLinks_Screen() {
         </BoxHeader>
 
         {/* MODAL SHARE */}
-        <Modal_Share openModalShare={openModalShare} shareUrl={shareUrl} />
+        <Modal_Share openModalShare={openModalShare} />
 
         {/* Titre */}
         <TypoTitle variant="h4">Développeur FullStack</TypoTitle>
@@ -97,7 +95,7 @@ export default function SocialsLinks_Screen() {
               component={motion.span}
               variants={charVariants}
               transition={{ duration: 3 }}
-              sx={{ color: darkMode ? "#FFF" : "#000" }}
+              sx={{ color: darkMode ? "#FFF" : "#000", fontSize: "20px" }}
             >
               {char}
             </Typography>
