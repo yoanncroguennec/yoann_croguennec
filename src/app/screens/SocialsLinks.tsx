@@ -10,7 +10,7 @@ import Modal_Share from "./components/Modal_Share";
 // FUNCTIONS
 import handleSplitStringUsingRegex from "../utils/helpers/functions/handleSplitStringUsingRegex";
 // DATAS
-// import dataSocialsLinks from "../utils/constants/data/dataSocialsLinks";
+import dataSocialsLinks from "../utils/constants/data/dataSocialsLinks";
 // ICONS
 import { FiMoon, FiSun, FiUser } from "react-icons/fi";
 import { IoIosMore } from "react-icons/io";
@@ -103,7 +103,7 @@ export default function SocialsLinks() {
         </Box>
 
         {/* SOCIALS LINKS */}
-        {/* <div className="socials-container">
+        <div className="socials-container">
           {dataSocialsLinks.map((social) => (
             <a
               key={social.name}
@@ -116,7 +116,7 @@ export default function SocialsLinks() {
               {social.svg}
             </a>
           ))}
-        </div> */}
+        </div>
         <Link href="https://portfolio-4zu2.vercel.app/">
           <Box
             sx={{ border: `2px solid ${darkMode ? "#FFF" : "#000"}` }}
