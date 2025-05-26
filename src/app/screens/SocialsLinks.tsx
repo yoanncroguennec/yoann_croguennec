@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Typography } from "@mui/material";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 // COMPONENTS
 import Modal_Share from "./components/Modal_Share";
 // FUNCTIONS
-// import handleSplitStringUsingRegex from "../utils/helpers/functions/handleSplitStringUsingRegex";
+import handleSplitStringUsingRegex from "../utils/helpers/functions/handleSplitStringUsingRegex";
 // DATAS
 // import dataSocialsLinks from "../utils/constants/data/dataSocialsLinks";
 // ICONS
@@ -33,16 +33,16 @@ export default function SocialsLinks() {
   const [ shareUrl ] = useState<string>("");
 
   //
-//   const textMyPresentation =
-//     "Yoann Croguennec, 37 ans, ayant obtenu un BTS de développeur web et web mobile, puis un niveau Licence. Spécialisé dans la création de site internet (React JS, Next JS), mais également dans la création d'application pour téléphone portable IOS & Android (React native).";
+  const textMyPresentation =
+    "Yoann Croguennec, 37 ans, ayant obtenu un BTS de développeur web et web mobile, puis un niveau Licence. Spécialisé dans la création de site internet (React JS, Next JS), mais également dans la création d'application pour téléphone portable IOS & Android (React native).";
 
-//   const textChars = handleSplitStringUsingRegex(textMyPresentation);
+  const textChars = handleSplitStringUsingRegex(textMyPresentation);
 
-//   //
-//   const charVariants = {
-//     hidden: { opacity: 0 },
-//     reveal: { opacity: 1 },
-//   };
+  //
+  const charVariants = {
+    hidden: { opacity: 0 },
+    reveal: { opacity: 1 },
+  };
 
   return (
     <RootSocialsLinks>
@@ -82,7 +82,7 @@ export default function SocialsLinks() {
         <TypoTitle variant="h4">Développeur FullStack</TypoTitle>
 
         {/* Présentation animée */}
-        {/* <Box
+        <Box
           component={motion.div}
           initial="hidden"
           whileInView="reveal"
@@ -100,7 +100,7 @@ export default function SocialsLinks() {
               {char}
             </Typography>
           ))}
-        </Box> */}
+        </Box>
 
         {/* SOCIALS LINKS */}
         {/* <div className="socials-container">
