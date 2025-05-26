@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.yoann-croguennec.fr/
+
+# Sitemaps
+Sitemap: https://www.yoann-croguennec.fr/sitemap.xml

@@ -7,6 +7,6 @@ export const metadata: Metadata = {
     "Portfolio et liens sociaux de Yoann Croguennec, développeur web et mobile FullStack (React, Next, React Native).",
 };
 
-export default function page() {
+export default function Page() {
   return <SocialsLinks />;
 }
