@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Button, styled, Typography } from "@mui/material";
 
 // IMGS
 const bg_1 = "/assets/imgs/bg_2.jpg";
@@ -54,4 +54,17 @@ export const TypoTitle = styled(Typography)(({}) => ({
   color: "#FF69B4",
   fontFamily: "Alex_Brush",
   textAlign: "center",
+}));
+
+export const Btn = styled(Button)(({}) => ({
+  background: "rgba(0, 0, 0, 0.8)",
+  border: "2px solid #F0F",
+  borderRadius: "25px",
+  padding: "10px 20px",
+}));
+
+export const TypoBtn = styled(Typography)(({}) => ({
+  color: "#F0F",
+  fontSize: "18px",
+  fontWeight: "bold",
 }));

@@ -6,11 +6,11 @@ import Image from "next/image";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 // COMPONENTS
-import Modal_Share from "../components/Modal_Share";
+import Modal_Share from "../../components/layouts/customs/modals/Modal_Share";
 // FUNCTIONS
-import handleSplitStringUsingRegex from "../utils/helpers/functions/handleSplitStringUsingRegex";
+import handleSplitStringUsingRegex from "../../utils/helpers/functions/handleSplitStringUsingRegex";
 // DATAS
-import dataSocialsLinks from "../utils/constants/data/dataSocialsLinks";
+import dataSocialsLinks from "../../utils/constants/data/dataSocialsLinks";
 // ICONS
 import { FiMoon, FiSun, FiUser } from "react-icons/fi";
 import { IoIosMore } from "react-icons/io";
@@ -18,19 +18,21 @@ import { IoIosMore } from "react-icons/io";
 import {
   BoxHeader,
   BoxSocialsLinks,
+  Btn,
   RootSocialsLinks,
   stylesImg,
+  TypoBtn,
   TypoTitle,
 } from "./StylesSocialsLinks";
-import { BoxBtn_CV } from "../StylesListOfLinks";
+import { BoxBtn_CV } from "../../StylesListOfLinks";
 
 // IMGS
 const imgProfile = "/assets/imgs/img_profile_1.jpeg";
 
-export default function SocialsLinks() {
-  const [ darkMode, setDarkMode ] = useState<boolean>(true);
-  const [ openModalShare, setOpenModalShare ] = useState<boolean>(false);
-  const [ shareUrl ] = useState<string>("");
+export default function SocialsLinks_Screen() {
+  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [openModalShare, setOpenModalShare] = useState<boolean>(false);
+  const [shareUrl] = useState<string>("");
 
   //
   const textMyPresentation =
@@ -118,11 +120,11 @@ export default function SocialsLinks() {
           ))}
         </div>
         <Link href="https://portfolio-4zu2.vercel.app/">
-          <Box sx={{ border: `2px solid ${darkMode ? "#FFF" : "#000"}` }}>
-            <Typography variant="body2">
-              PORTFOLIO(Présentation des projets)
-            </Typography>
-          </Box>
+          <Btn>
+            <TypoBtn variant="body2">
+              PORTFOLIO (Présentation des projets)
+            </TypoBtn>
+          </Btn>
         </Link>
         <Link href="/screens/pdf">
           <BoxBtn_CV>

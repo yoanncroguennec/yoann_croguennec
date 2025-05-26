@@ -1,16 +1,17 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import {
-  Box,
-  Button,
-  InputAdornment,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { InputAdornment, TextField } from "@mui/material";
 import QRCode from "react-qr-code";
 // ICONS
 import { FaInternetExplorer } from "react-icons/fa";
+// STYLES
+import {
+  BtnGenerateCodeQR,
+  RootQR_Code_Generate,
+  TypoGenerateCodeQR,
+  TypoTitle,
+} from "./StylesQR_Code_Generate";
 
 export default function QR_Code_Generate() {
   const [value, setValue] = useState<string>("");
@@ -42,31 +43,13 @@ export default function QR_Code_Generate() {
   }, [value]);
 
   return (
-    <Box
-      sx={{
-        alignItems: "center",
-        background: "rgba(0, 0, 0, 1)",
-        borderRadius: "25px",
-        boxShadow:
-          "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-        height: !qrVisible ? "300px" : "500px",
-        minHeight: "300px",
-        padding: "25px",
-        width: "100%",
-        maxWidth: "500px",
-      }}
-    >
-      <Typography sx={{ color: "#FFF", textAlign: "center" }} variant="h5">
-        Générer un Code QR
-      </Typography>
+    <RootQR_Code_Generate qrVisible={qrVisible}>
+      <TypoTitle variant="h5">Générer un Code QR</TypoTitle>
       <TextField
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <FaInternetExplorer style={{ color: "#FFF", fontSize: "25px" }} />
+              <FaInternetExplorer style={{ color: "#000", fontSize: "25px" }} />
             </InputAdornment>
           ),
           sx: {
@@ -84,22 +67,22 @@ export default function QR_Code_Generate() {
         sx={{
           width: "100%",
           input: {
-            color: "#FFF",
+            color: "#000",
             fontSize: "18px", // ✅ taille du texte saisi
             "::placeholder": {
-              color: "#FFF",
+              color: "#000",
               opacity: 1,
               fontSize: "18px", // ✅ taille du placeholder
               fontWeight: "bold",
             },
           },
           label: {
-            color: "#FFF",
+            color: "#000",
             fontSize: "18px", // ✅ taille du label
           },
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
-              borderColor: "#FFF",
+              borderColor: "#000",
             },
             "&:hover fieldset": {
               borderColor: "#00CFFF",
@@ -114,21 +97,13 @@ export default function QR_Code_Generate() {
         variant="outlined"
       />
 
-      <Button
-        onClick={GenerateQrCode_Handler}
-        sx={{ border: "2px solid #F0F", borderRadius: "25px", padding: "10px 20px" }}
-        variant="text"
-      >
-        <Typography sx={{ color: "#FFF" }} variant="h6">
-          Générer Code QR
-        </Typography>
-      </Button>
+      <BtnGenerateCodeQR onClick={GenerateQrCode_Handler} variant="text">
+        <TypoGenerateCodeQR variant="h6">Générer Code QR</TypoGenerateCodeQR>
+      </BtnGenerateCodeQR>
 
       {qrVisible && (
-        <Box sx={{ marginTop: "20px" }}>
-          <QRCode size={150} value={value} />
-        </Box>
+        <QRCode size={150} style={{ marginTop: "20px" }} value={value} />
       )}
-    </Box>
+    </RootQR_Code_Generate>
   );
 }

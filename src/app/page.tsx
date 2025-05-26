@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import SocialsLinks from "./screens/SocialsLinks";
+import SocialsLinks from "./screens/socialsLinks/SocialsLinks";
 
 export const metadata: Metadata = {
   title: "Yoann Croguennec - Développeur FullStack",
