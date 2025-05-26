@@ -15,16 +15,15 @@ import {
 import { FiSun, FiMoon, FiUser } from "react-icons/fi";
 import { IoIosMore } from "react-icons/io";
 import { motion } from "framer-motion";
-
 // STYLES
 import {
   BoxBtn_CV,
   BoxLinkPortfolio,
   TypoPortfolio,
 } from "./StylesListOfLinks";
-import dataLinks from "@/app/utils/constants/data/dataLinks";
 import handleSplitStringUsingRegex from "@/app/utils/helpers/functions/handleSplitStringUsingRegex";
-
+// DATAS
+import dataSocialsLinks from "./utils/constants/data/dataSocialsLinks";
 // IMGS
 const bg_1 = "/assets/imgs/bg_1.jpeg";
 const imgProfile = "/assets/imgs/img_profile_1.jpeg";
@@ -37,60 +36,49 @@ const charVariants = {
   reveal: { opacity: 1 },
 };
 
-export default function Home() {
-  const [openModalShare, setOpenModalShare] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
-  const [shareUrl, setShareUrl] = useState("");
+export default function Socials() {
+    const [openModalShare, setOpenModalShare] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
+    const [shareUrl, setShareUrl] = useState("");
 
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("md"));
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-  const textChars = handleSplitStringUsingRegex(textMyPresentation);
+    const textChars = handleSplitStringUsingRegex(textMyPresentation);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setShareUrl(window.location.href);
-    }
-  }, []);
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        setShareUrl(window.location.href);
+      }
+    }, []);
 
-  return (
-    <Box
-      sx={{
-        alignItems: "center",
-        backgroundImage: `url(${bg_1})`,
-        backgroundSize: "cover",
-        display: "flex",
-        height: "100vh",
-        justifyContent: "center",
-      }}
-    >
+    return (
       <Box
         sx={{
           alignItems: "center",
-          background: matches
-            ? "transparent"
-            : darkMode
-              ? "rgba(0, 0, 0, 0.5)"
-              : "rgba(255, 238, 255, 0.5)",
-          borderRadius: matches ? 0 : 3,
+          backgroundImage: `url(${bg_1})`,
+          backgroundSize: "cover",
           display: "flex",
-          height: matches ? "100%" : 770,
+          height: "100vh",
           justifyContent: "center",
-          padding: matches ? 0 : 3,
-          width: matches ? "100%" : 560,
         }}
       >
         <Box
           sx={{
             alignItems: "center",
+            background: matches
+              ? "transparent"
+              : darkMode
+                ? "rgba(0, 0, 0, 0.5)"
+                : "rgba(255, 238, 255, 0.5)",
+            borderRadius: matches ? 0 : 3,
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-between",
-            height: "100%",
-            width: "100%",
+            height: matches ? "100%" : 770,
+            padding: matches ? 0 : 3,
+            width: matches ? "100%" : 560,
           }}
         >
-          {/* Header */}
           <Box
             sx={{
               display: "flex",
@@ -127,7 +115,6 @@ export default function Home() {
               </Box>
             </Box>
           </Box>
-
           {/* Share Modal */}
           {openModalShare && (
             <Box
@@ -163,7 +150,6 @@ export default function Home() {
               </Box>
             </Box>
           )}
-
           {/* Titre */}
           <Typography
             variant="h4"
@@ -176,30 +162,20 @@ export default function Home() {
             Développeur FullStack
           </Typography>
 
-          {/* Réseaux sociaux */}
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              flexWrap: "wrap",
-              width: "100%",
-              gap: 2,
-              mt: 2,
-            }}
-          >
-            {dataLinks.map(({ name, icon, url }) => (
-              <Link href={url} key={name}>
-                <Image
-                  src={icon}
-                  alt={name}
-                  width={60}
-                  height={60}
-                  style={{ objectFit: "contain" }}
-                />
-              </Link>
+          <div className="socials-container">
+            {dataSocialsLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-social={social.name}
+                aria-label={social.name}
+              >
+                {social.svg}
+              </a>
             ))}
-          </Box>
-
+          </div>
           {/* Présentation animée */}
           <Box
             component={motion.div}
@@ -220,7 +196,6 @@ export default function Home() {
               </Typography>
             ))}
           </Box>
-
           {/* Liens Portfolio + CV */}
           <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
             <Link href="https://portfolio-4zu2.vercel.app/">
@@ -246,6 +221,5 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
-    </Box>
-  );
+    );
 }

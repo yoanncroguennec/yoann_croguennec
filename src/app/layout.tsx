@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SocialsLinks from "./screens/SocialsLinks";
 
 export const metadata: Metadata = {
   title: "Yoann Croguennec",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body cz-shortcut-listen="true">{children}</body>
+      <body cz-shortcut-listen="true">
+        <SocialsLinks />
+        {/* {children} */}
+      </body>
     </html>
   );
 }
