@@ -1,44 +1,48 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
+// import Image from "next/image";
+import { Box, Typography } from "@mui/material";
+// import { motion } from "framer-motion";
+// COMPONENTS
+import Modal_Share from "./components/Modal_Share";
+// FUNCTIONS
+// import handleSplitStringUsingRegex from "../utils/helpers/functions/handleSplitStringUsingRegex";
+// DATAS
+// import dataSocialsLinks from "../utils/constants/data/dataSocialsLinks";
+// ICONS
+// import { FiMoon, FiSun, FiUser } from "react-icons/fi";
+// import { IoIosMore } from "react-icons/io";
 // STYLES
 import {
-  BoxHeader,
+//   BoxHeader,
   BoxSocialsLinks,
   RootSocialsLinks,
-  stylesImg,
+//   stylesImg,
   TypoTitle,
 } from "./StylesSocialsLinks";
-import { Box, Typography } from "@mui/material";
-import Link from "next/link";
-import { FiMoon, FiSun, FiUser } from "react-icons/fi";
-import Image from "next/image";
-import { IoIosMore } from "react-icons/io";
-import Modal_Share from "./components/Modal_Share";
-import dataSocialsLinks from "../utils/constants/data/dataSocialsLinks";
-import handleSplitStringUsingRegex from "../utils/helpers/functions/handleSplitStringUsingRegex";
-import { motion } from "framer-motion";
 import { BoxBtn_CV } from "../StylesListOfLinks";
 
 // IMGS
-const imgProfile = "/assets/imgs/img_profile_1.jpeg";
+// const imgProfile = "/assets/imgs/img_profile_1.jpeg";
 
 export default function SocialsLinks() {
-  const [darkMode, setDarkMode] = useState<boolean>(true);
-  const [openModalShare, setOpenModalShare] = useState<boolean>(false);
+  const [darkMode] = useState<boolean>(true);
+  const [openModalShare] = useState<boolean>(false);
   const [shareUrl] = useState<string>("");
 
   //
-  const textMyPresentation =
-    "Yoann Croguennec, 37 ans, ayant obtenu un BTS de développeur web et web mobile, puis un niveau Licence. Spécialisé dans la création de site internet (React JS, Next JS), mais également dans la création d'application pour téléphone portable IOS & Android (React native).";
+//   const textMyPresentation =
+//     "Yoann Croguennec, 37 ans, ayant obtenu un BTS de développeur web et web mobile, puis un niveau Licence. Spécialisé dans la création de site internet (React JS, Next JS), mais également dans la création d'application pour téléphone portable IOS & Android (React native).";
 
-  const textChars = handleSplitStringUsingRegex(textMyPresentation);
+//   const textChars = handleSplitStringUsingRegex(textMyPresentation);
 
-  //
-  const charVariants = {
-    hidden: { opacity: 0 },
-    reveal: { opacity: 1 },
-  };
+//   //
+//   const charVariants = {
+//     hidden: { opacity: 0 },
+//     reveal: { opacity: 1 },
+//   };
 
   return (
     <RootSocialsLinks>
