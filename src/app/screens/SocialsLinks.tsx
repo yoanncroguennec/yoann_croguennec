@@ -48,7 +48,7 @@ export default function SocialsLinks() {
     <RootSocialsLinks>
       <BoxSocialsLinks darkMode={darkMode}>
         <BoxHeader>
-          <Link href="#">
+          <Link href="/screens/admin/dashboard">
             <FiUser color={darkMode ? "#FFF" : "#000"} size={40} />
           </Link>
           <Image
@@ -118,9 +118,7 @@ export default function SocialsLinks() {
           ))}
         </div>
         <Link href="https://portfolio-4zu2.vercel.app/">
-          <Box
-            sx={{ border: `2px solid ${darkMode ? "#FFF" : "#000"}` }}
-          >
+          <Box sx={{ border: `2px solid ${darkMode ? "#FFF" : "#000"}` }}>
             <Typography variant="body2">
               PORTFOLIO(Présentation des projets)
             </Typography>

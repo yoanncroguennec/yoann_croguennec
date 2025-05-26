@@ -1,4 +1,4 @@
-export default function page() {
+export default function Pdf_Screen() {
   return (
     <div style={{ width: "100%", height: "100vh" }}>
       <iframe
