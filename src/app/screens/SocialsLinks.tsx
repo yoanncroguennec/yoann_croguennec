@@ -18,7 +18,7 @@ import Modal_Share from "./components/Modal_Share";
 import dataSocialsLinks from "../utils/constants/data/dataSocialsLinks";
 import handleSplitStringUsingRegex from "../utils/helpers/functions/handleSplitStringUsingRegex";
 import { motion } from "framer-motion";
-import { BoxBtn_CV, BoxLinkPortfolio, TypoPortfolio } from "../StylesListOfLinks";
+import { BoxBtn_CV } from "../StylesListOfLinks";
 
 // IMGS
 const imgProfile = "/assets/imgs/img_profile_1.jpeg";

@@ -7,16 +7,13 @@ export const metadata: Metadata = {
   description: "Portfolio",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body cz-shortcut-listen="true">
         <SocialsLinks />
-        {/* {children} */}
       </body>
     </html>
   );
