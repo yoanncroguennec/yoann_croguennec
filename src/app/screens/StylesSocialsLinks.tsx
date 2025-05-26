@@ -10,7 +10,7 @@ interface BoxSocialsLinksProps {
   darkMode: boolean;
 }
 
-export const RootSocialsLinks = styled(Box)(({ theme }) => ({
+export const RootSocialsLinks = styled(Box)(({ }) => ({
   alignItems: "center",
   backgroundImage: `url(${bg_1})`,
   backgroundSize: "cover",
@@ -18,7 +18,6 @@ export const RootSocialsLinks = styled(Box)(({ theme }) => ({
   height: "100vh",
   justifyContent: "center",
   width: "100vw",
-  [theme.breakpoints.down("sm")]: {},
 }));
 
 export const BoxSocialsLinks = styled(Box, {
@@ -38,7 +37,7 @@ export const BoxSocialsLinks = styled(Box, {
   [theme.breakpoints.down("sm")]: { borderRadius: 0 },
 }));
 
-export const BoxHeader = styled(Box)(({ theme }) => ({
+export const BoxHeader = styled(Box)(({  }) => ({
   alignItems: "center",
   display: "flex",
   justifyContent: "space-between",

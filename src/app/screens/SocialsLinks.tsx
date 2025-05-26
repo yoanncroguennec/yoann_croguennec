@@ -26,7 +26,7 @@ const imgProfile = "/assets/imgs/img_profile_1.jpeg";
 export default function SocialsLinks() {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [openModalShare, setOpenModalShare] = useState<boolean>(false);
-  const [shareUrl, setShareUrl] = useState<string>("");
+  const [shareUrl] = useState<string>("");
 
   //
   const textMyPresentation =
