@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 import { Box, Typography } from "@mui/material";
 // import { motion } from "framer-motion";
 // COMPONENTS
@@ -12,25 +12,25 @@ import Modal_Share from "./components/Modal_Share";
 // DATAS
 // import dataSocialsLinks from "../utils/constants/data/dataSocialsLinks";
 // ICONS
-// import { FiMoon, FiSun, FiUser } from "react-icons/fi";
-// import { IoIosMore } from "react-icons/io";
+import { FiMoon, FiSun, FiUser } from "react-icons/fi";
+import { IoIosMore } from "react-icons/io";
 // STYLES
 import {
-//   BoxHeader,
+  BoxHeader,
   BoxSocialsLinks,
   RootSocialsLinks,
-//   stylesImg,
+  stylesImg,
   TypoTitle,
 } from "./StylesSocialsLinks";
 import { BoxBtn_CV } from "../StylesListOfLinks";
 
 // IMGS
-// const imgProfile = "/assets/imgs/img_profile_1.jpeg";
+const imgProfile = "/assets/imgs/img_profile_1.jpeg";
 
 export default function SocialsLinks() {
-  const [darkMode] = useState<boolean>(true);
-  const [openModalShare] = useState<boolean>(false);
-  const [shareUrl] = useState<string>("");
+  const [ darkMode, setDarkMode ] = useState<boolean>(true);
+  const [ openModalShare, setOpenModalShare ] = useState<boolean>(false);
+  const [ shareUrl ] = useState<string>("");
 
   //
 //   const textMyPresentation =
@@ -47,7 +47,7 @@ export default function SocialsLinks() {
   return (
     <RootSocialsLinks>
       <BoxSocialsLinks darkMode={darkMode}>
-        {/* <BoxHeader>
+        <BoxHeader>
           <Link href="#">
             <FiUser color={darkMode ? "#FFF" : "#000"} size={40} />
           </Link>
@@ -73,7 +73,7 @@ export default function SocialsLinks() {
               )}
             </Box>
           </Box>
-        </BoxHeader> */}
+        </BoxHeader>
 
         {/* MODAL SHARE */}
         <Modal_Share openModalShare={openModalShare} shareUrl={shareUrl} />
