@@ -2,9 +2,6 @@
 
 import { Box, Button, styled, Typography } from "@mui/material";
 
-// IMGS
-const bg_1 = "/assets/imgs/bg_2.jpg";
-
 // Typage des props personnalisées
 interface RootQR_Code_GenerateProps {
   qrVisible: boolean;
