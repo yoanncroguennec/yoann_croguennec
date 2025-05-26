@@ -43,7 +43,7 @@ export default function SocialsLinks() {
   return (
     <RootSocialsLinks>
       <BoxSocialsLinks darkMode={darkMode}>
-        <BoxHeader>
+        {/* <BoxHeader>
           <Link href="#">
             <FiUser color={darkMode ? "#FFF" : "#000"} size={40} />
           </Link>
@@ -69,7 +69,7 @@ export default function SocialsLinks() {
               )}
             </Box>
           </Box>
-        </BoxHeader>
+        </BoxHeader> */}
 
         {/* MODAL SHARE */}
         <Modal_Share openModalShare={openModalShare} shareUrl={shareUrl} />
@@ -78,7 +78,7 @@ export default function SocialsLinks() {
         <TypoTitle variant="h4">Développeur FullStack</TypoTitle>
 
         {/* Présentation animée */}
-        <Box
+        {/* <Box
           component={motion.div}
           initial="hidden"
           whileInView="reveal"
@@ -96,10 +96,10 @@ export default function SocialsLinks() {
               {char}
             </Typography>
           ))}
-        </Box>
+        </Box> */}
 
         {/* SOCIALS LINKS */}
-        <div className="socials-container">
+        {/* <div className="socials-container">
           {dataSocialsLinks.map((social) => (
             <a
               key={social.name}
@@ -112,7 +112,7 @@ export default function SocialsLinks() {
               {social.svg}
             </a>
           ))}
-        </div>
+        </div> */}
         <Link href="https://portfolio-4zu2.vercel.app/">
           <Box
             sx={{ border: `2px solid ${darkMode ? "#FFF" : "#000"}` }}
