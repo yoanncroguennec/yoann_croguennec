@@ -98,7 +98,8 @@ body {
   display: grid;
   grid-template: 100px / auto auto auto;
   justify-content: space-evenly;
-  width: 500px;
+  padding: 15px;
+  width: 100%;
 }
 
 .socials-container a {
