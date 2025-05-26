@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 // COMPONENTS
-import Modal_Share from "./components/Modal_Share";
+import Modal_Share from "../components/Modal_Share";
 // FUNCTIONS
 import handleSplitStringUsingRegex from "../utils/helpers/functions/handleSplitStringUsingRegex";
 // DATAS
@@ -126,7 +126,7 @@ export default function SocialsLinks() {
             </Typography>
           </Box>
         </Link>
-        <Link href="https://portfolio-4zu2.vercel.app/cv_pdf/CV_PDF">
+        <Link href="/screens/pdf">
           <BoxBtn_CV>
             <Typography
               variant="h5"
