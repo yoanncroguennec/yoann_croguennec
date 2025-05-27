@@ -117,13 +117,13 @@ export default function SocialsLinks_Screen() {
             </a>
           ))}
         </div>
-        <Link href="https://portfolio-4zu2.vercel.app/">
+        {/* <Link href="/screens/portfolio/animationIntro">
           <Btn>
             <TypoBtn variant="body2">
               PORTFOLIO (Présentation des projets)
             </TypoBtn>
           </Btn>
-        </Link>
+        </Link> */}
         <Link href="/screens/pdf">
           <BoxBtn_CV>
             <Typography

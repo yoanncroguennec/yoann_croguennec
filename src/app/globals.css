@@ -168,3 +168,21 @@ body {
   transform: translateY(-42px) rotate(0);
   opacity: 1;
 }
+
+/* 
+.
+.img {
+  /*
+  - "animation delay": Combien doit attendre l'animation jusqu'à ce que la lecture commence.
+  - "animation-duration": Combien de temps votre animation prend pour terminer un cycle.
+
+
+  animation: animateIntro 1.5s linear forwards;
+  animation-delay: 3s;
+  filter: blur(1px);
+  opacity: 0;
+
+
+}
+*/
+  
