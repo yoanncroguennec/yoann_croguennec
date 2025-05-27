@@ -26,27 +26,36 @@ export const RootAnimationIntro = styled(Box)(({ }) => ({
   },
 }));
 
+export const BoxAnimationIntro = styled(Box)(({ }) => ({
+  alignItems: "center",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  position: "absolute",
+  width: "100%"
+}));
+
 export const stylesImgProfile_3: CSSProperties = {
   animation: "animate 5s linear forwards",
   border: "2px solid #F00",
   borderRadius: "50%",
   height: "250px",
   marginBottom: "1rem",
-  position: "absolute",
-  top: "20%",
+  // position: "absolute",
+  // top: "20%",
   width: "250px",
 }
 
 export const TypoTitle = styled(Typography)(({ }) => ({
   color: "#DDD",
-  fontSize: "5em",
+  // fontSize: "5em",
   letterSpacing: "0.2em",
   margin: 0,
   padding: 0,
-  position: "absolute",
+  // position: "absolute",
   textAlign: "center",
-  top: "50%",
-  transform: "translateY(-50%)",
+  // top: "50%",
+  // transform: "translateY(-50%)",
   width: "100%",
 }));
 
@@ -71,7 +80,7 @@ export const TypoTitleSpan = styled(Box)(() => ({
   ":nth-of-type(3)": { animationDelay: "2.5s" },
   ":nth-of-type(4)": { animationDelay: "3s" },
   ":nth-of-type(5)": { animationDelay: "3.5s" },
-
+  /////////////////////////////////////////////
   ":nth-of-type(6)": { animationDelay: "1s" },
   ":nth-of-type(7)": { animationDelay: "2s" },
   ":nth-of-type(8)": { animationDelay: "2.5s" },

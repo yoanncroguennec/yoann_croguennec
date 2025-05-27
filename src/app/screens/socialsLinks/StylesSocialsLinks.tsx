@@ -10,12 +10,12 @@ interface BoxSocialsLinksProps {
   darkMode: boolean;
 }
 
-export const RootSocialsLinks = styled(Box)(({ }) => ({
+export const RootSocialsLinks = styled(Box)(({ theme }) => ({
   alignItems: "center",
   backgroundImage: `url(${bg_1})`,
   backgroundSize: "cover",
   display: "flex",
-  height: "100vh",
+  minHeight: "100vh",
   justifyContent: "center",
   width: "100vw",
 }));
@@ -30,7 +30,7 @@ export const BoxSocialsLinks = styled(Box, {
     "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
   display: "flex",
   flexDirection: "column",
-  height: 770,
+  height: 850,
   justifyContent: "space-evenly",
   padding: 30,
   width: 560,
