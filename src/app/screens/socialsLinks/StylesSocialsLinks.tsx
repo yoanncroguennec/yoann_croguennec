@@ -10,7 +10,7 @@ interface BoxSocialsLinksProps {
   darkMode: boolean;
 }
 
-export const RootSocialsLinks = styled(Box)(({ theme }) => ({
+export const RootSocialsLinks = styled(Box)(({ }) => ({
   alignItems: "center",
   backgroundImage: `url(${bg_1})`,
   backgroundSize: "cover",
