@@ -18,10 +18,10 @@ import { IoIosMore } from "react-icons/io";
 import {
   BoxHeader,
   BoxSocialsLinks,
-  Btn,
+  // Btn,
   RootSocialsLinks,
   stylesImg,
-  TypoBtn,
+  // TypoBtn,
   TypoTitle,
 } from "./StylesSocialsLinks";
 import { BoxBtn_CV } from "../../StylesListOfLinks";
