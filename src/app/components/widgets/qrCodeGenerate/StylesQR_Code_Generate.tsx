@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Button, styled, Typography } from "@mui/material";
-// import { shouldForwardProp } from "@mui/system";
 
 // Typage des props personnalisées
 interface RootQR_Code_GenerateProps {
